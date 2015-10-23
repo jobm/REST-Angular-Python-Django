@@ -3,14 +3,15 @@
 {% block content %}
 
 {% for i in data %}
-<div id="todoapp">
+<div class="container todo-app">
     <ul>
         <li>
-            <h4>Name <span class="badge">{{ i.item }}</span></h4>
-            <h4>Name <span class="badge">{{ i.item }}</span></h4>
-            <h4>Name <span class="badge">{{ i.item }}</span></h4>
-        </li>
 
+            <div class="todo-item">
+                <h2>{{ i.item }}</h2>
+                <h4>{{ i.description }}</h4>
+            </div>
+        </li>
     </ul>
 </div>
 <!--<ul>-->

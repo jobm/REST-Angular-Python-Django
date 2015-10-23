@@ -25,6 +25,7 @@ def index(request):
     if request.user.is_authenticated():
         response = requests.get("http://127.0.0.1:8000/api/todoitems/?format=json")
         data = [x for x in response.json()]
+        print(data)
         return render(request, "index.html", {"data": data})
 
     return render(request, "login.html", {})
