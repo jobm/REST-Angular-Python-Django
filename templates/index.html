@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+{% for i in data %}
+<ul>
+    <li>{{ i.item }}</li>
+</ul>
+{% endfor %}
+{% endblock %}

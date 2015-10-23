@@ -57,7 +57,7 @@ ROOT_URLCONF = 'Todo.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,13 +72,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Todo.wsgi.application'
 
-
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
-
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
