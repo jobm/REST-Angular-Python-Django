@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 from Todo_app import urls
 urlpatterns = [
-    url(r'^$',  views.index),
+    url(r'^home/$',  views.index),
+    url(r'^login/$', views.login),
     url(r'^api/', include('Todo_app.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
