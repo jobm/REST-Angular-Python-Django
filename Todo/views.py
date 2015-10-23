@@ -5,7 +5,7 @@ from django.http import *
 import requests
 
 
-def login(request):
+def login_user(request):
     logout(request)
     username = password = ''
     if request.POST:
@@ -16,7 +16,7 @@ def login(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                return HttpResponseRedirect('/home/')
+                return redirect("/")
     return render(request, 'login.html', {})
 
 

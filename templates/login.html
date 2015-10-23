@@ -6,13 +6,36 @@
         {% csrf_token %}
         <h2 class="form-signin-heading">Please sign in</h2>
 
-        <label for="inputUsername" class="sr-only">Email address</label>
-        <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+        <label for="username" class="sr-only">Email address</label>
+        <input type="text" id="username" class="form-control" name="username"  placeholder="Username" required autofocus>
 
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" class="form-control" name="password"  placeholder="Password" required>
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
     </form>
+
+    <!--<div id="login">-->
+        <!--<form class="form-signin" name="LoginForm" action="/login/" method="post">-->
+        <!--{% csrf_token %}-->
+        <!--<div class="control-group">-->
+            <!--<label class="control-label" for="inputUsername">Username</label>-->
+            <!--<div class="controls">-->
+                <!--<input type="text" id="inputUsername" name="username"  placeholder="Username">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="control-group">-->
+            <!--<label class="control-label" for="password">Password</label>-->
+            <!--<div class="controls">-->
+                <!--<input type="password" name="password" id="password" placeholder="Password">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="control-group">-->
+            <!--<div class="controls">-->
+                <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--</form>-->
+    <!--</div>-->
 </div>
 {%endblock%}

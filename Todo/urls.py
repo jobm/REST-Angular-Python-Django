@@ -20,8 +20,8 @@ from . import views
 
 from Todo_app import urls
 urlpatterns = [
-    url(r'^home/$',  views.index),
-    url(r'^login/$', views.login),
+    url(r'^$',  views.index),
+    url(r'^login/$', views.login_user),
     url(r'^api/', include('Todo_app.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
